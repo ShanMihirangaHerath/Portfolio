@@ -2,6 +2,9 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import profilePic from "../../public/images/profile/profiledeveloper-pic-1.png";
+import AnimatedText from "@/components/AnimatedText";
+import Link from "next/link";
+import { LinkArrow } from "@/components/Icons";
 
 export default function Home() {
   return (
@@ -20,17 +23,30 @@ export default function Home() {
                 className="w-full h-auto"
               />
             </div>
-            <div className="w-1/2">
-              <h1 className="text-xl font-bold">Building the Future, One Stack at a Time.</h1><br/>
-              <p>
-                As a proficient full-stack developer, I specialize in <br/>
-                transforming ideas into impactful web applications. With a <br/>
-                strong focus on modern frameworks like React.js, I am committed <br/>
-                to delivering innovative, efficient, and scalable solutions. <br/>
-                Dive into my latest projects and articles to explore the depth <br/>
-                of my experience in full-stack development and my dedication to <br/>
+            <div className="w-1/2 flex flex-col items-center self-center">
+              <AnimatedText text="Building the Future, One Stack at a Time." className="!text-6xl !text-left"/>
+              <br/>
+              <p className="my-4 text-base font-medium ">
+                As a proficient full-stack developer, I specialize in 
+                transforming ideas into impactful web applications. With a 
+                strong focus on modern frameworks like React.js, I am committed 
+                to delivering innovative, efficient, and scalable solutions. 
+                Dive into my latest projects and articles to explore the depth 
+                of my experience in full-stack development and my dedication to 
                 crafting seamless user experiences. 
               </p>
+              <div className="flex items-center self-start mt-2 ">
+                <Link href="/dummy.pdf" target={"_blank"} 
+                className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold 
+                hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark" 
+                download={true}
+                >
+                  Resume<LinkArrow className={"w-6 ml-1"}/>
+                </Link>
+                <Link href="solocoder.se@gmail.com" target={"_blank"} 
+                className="ml-4 text-lg font-medium capitalize text-dark underline underline-offset-2"
+                >Contact</Link>
+              </div>
             </div>
           </div>
         </Layout>
