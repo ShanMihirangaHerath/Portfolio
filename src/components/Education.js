@@ -44,7 +44,7 @@ const Education = () => {
 
         <ul className="w-full flex flex-col items-start justify-between ml-4">
           <Details
-            type="Bachelor Of Science In Computer Science(Undergraduate)"
+            type="Bachelor of Software Engineering Honours(Undergraduate)"
             time="2023-present"
             place="Birmingham City University (BCU)"
             info="Relevant courses included Algorithm Design, System Architecture, Artificial Intelligence, 
