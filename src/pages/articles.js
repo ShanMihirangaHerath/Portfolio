@@ -40,7 +40,7 @@ const MovingImage = ({ title, image, link }) => {
         ref={imgRef}
         src={image}
         alt={title}
-        className="z-10 w-96 h-auto hidden absolute rounded-lg "
+        className="z-10 w-96 h-auto hidden absolute rounded-lg md:!hidden"
         style={{ x: x, y: y }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, transition: { duration: 0.2 } }}
@@ -56,10 +56,11 @@ const Artile = ({ image, title, date, link }) => {
       whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
       viewport={{ once: true }}
       className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 
-    dark:border-light dark:bg-dark dark:text-light"
+    dark:border-light dark:bg-dark dark:text-light 
+    sm:flex-col "
     >
       <MovingImage title={title} image={image} link={link} />
-      <span className="text-primary font-semibold pl-4 dark:text-primaryDark">
+      <span className="text-primary font-semibold pl-4 dark:text-primaryDark sm:self-start sm:pl-0 xs:text-sm">
         {date}
       </span>
     </motion.li>
@@ -88,7 +89,7 @@ const HighlightedArticle = ({ image, title, time, summery, link }) => {
         />
       </Link>
       <Link href={link} target="_blank">
-        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline underline-offset-2">
+        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline underline-offset-2 xs:text-lg">
           {title}
         </h2>
       </Link>
@@ -111,9 +112,9 @@ const articles = () => {
         <Layout className="pt-16">
           <AnimatedText
             text="Words Have the Power to Shape the World!"
-            className="mb-16"
+            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
-          <ul className="grid grid-cols-2 gap-16">
+          <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
             <HighlightedArticle
               title="Build A Custom Pagination Component In Reactjs From Scratch"
               summery="Learn how to build a custom pagination component in ReactJS from scratch. 
