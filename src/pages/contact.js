@@ -2,6 +2,9 @@ import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import TransitionEffect from "@/components/TransitionEffect";
 import Head from "next/head";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button"
 import React from "react";
 
 const contact = () => {
@@ -81,74 +84,75 @@ const contact = () => {
                 <div className="flex flex-wrap w-full gap-4">
                   <label className="flex-1 block" htmlFor="firstName">
                     <span className="mb-1">First Name</span>
-                    <input
+                    <Input
                       id="firstName"
                       type="text"
+                      name="firstName"
                       placeholder="John"
-                      className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:bg-slate-800"
+                      className="block w-full mt-1 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:bg-slate-800"
                     />
                   </label>
                   <label className="flex-1 block" htmlFor="lastName">
                     <span className="mb-1">Last Name</span>
-                    <input
+                    <Input
                       id="lastName"
                       type="text"
                       placeholder="Doe"
-                      className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:bg-slate-800"
+                      className="block w-full mt-1 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:bg-slate-800"
                     />
                   </label>
                 </div>
 
                 <label className="block">
                   <span className="mb-1">Email address</span>
-                  <input
+                  <Input
                     type="email"
                     placeholder="leroy@jenkins.com"
-                    className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:bg-slate-800"
+                    className="block w-full mt-1 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:bg-slate-800"
                   />
                 </label>
                 <div className="flex flex-wrap w-full gap-4">
                   <label className="flex-1 block" htmlFor="firstName">
                     <span className="mb-1">Mobile Number 1</span>
-                    <input
+                    <Input
                       id="firstName"
                       type="text"
                       placeholder="Your Contact Number 1"
-                      className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:bg-slate-800"
+                      className="block w-full mt-1 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:bg-slate-800"
                     />
                   </label>
                   <label className="flex-1 block" htmlFor="lastName">
                     <span className="mb-1">Mobile Number 2</span>
-                    <input
+                    <Input
                       id="lastName"
                       type="text"
                       placeholder="Your Contact Number 2"
-                      className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:bg-slate-800"
+                      className="block w-full mt-1 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:bg-slate-800"
                     />
                   </label>
                 </div>
                 <label className="block">
                   <span className="mb-1">Subject</span>
-                  <input
+                  <Input
                     type="email"
                     placeholder="Subject"
-                    className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:bg-slate-800"
+                    className="block w-full mt-1 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:bg-slate-800"
                   />
                 </label>
                 <label className="block">
                   <span className="mb-1">Message</span>
-                  <textarea
+                  <Textarea
                     rows="3"
                     placeholder="Hello, I'm looking forward to discussing your project!"
-                    className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:bg-slate-800"
-                  ></textarea>
+                    className="block w-full mt-1 rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-600 dark:bg-slate-800"
+                  ></Textarea>
                 </label>
-                <button
+                <Button
                   type="button"
                   className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-yellow-300 dark:text-black focus:ring-yellow-700 hover:ring-yellow-700"
                 >
                   Submit
-                </button>
+                </Button>
               </form>
             </div>
           </section>
