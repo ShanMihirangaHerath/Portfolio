@@ -6,7 +6,6 @@ import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
 import HireMe from "@/components/HireMe";
-import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import TransitionEffect from "@/components/TransitionEffect";
 
 export default function Home() {
@@ -60,8 +59,7 @@ export default function Home() {
                   <LinkArrow className={"w-6 ml-1"} />
                 </Link>
                 <Link
-                  href="solocoder.se@gmail.com"
-                  target={"_blank"}
+                  href="/contact"
                   className="ml-4 text-lg font-medium capitalize text-dark underline underline-offset-2 dark:text-light 
                   md:text-base"
                 >
@@ -73,9 +71,6 @@ export default function Home() {
         </Layout>
 
         <HireMe />
-        <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden lg:hidden xl:hidden">
-          <Image src={lightBulb} alt="ShanDev." className="w-full h-auto" />
-        </div>
       </main>
     </>
   );
