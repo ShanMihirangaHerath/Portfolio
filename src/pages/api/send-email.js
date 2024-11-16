@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     service: "gmail",
     auth: {
       user: "solocoder.se@gmail.com", // Your email address
-      pass: "Shan_Solocoder#2006", // Your password
+      pass: "dcsw cicu izsh uwbc", // Your password
     },
   });
 
